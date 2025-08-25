@@ -5,7 +5,7 @@ import pickle
 generateAI() 
 ai = pickle. load (open('model.pkl','rb'))
 
-app= Falsk(__name__) 
+app= Flask(__name__) 
 @app.route('/')
 def home():
     return('AI Model Server is running')
@@ -21,6 +21,7 @@ def predict():
 
 if(__name__=="__main__"):
     app.run(host='0.0.0.0',port=5000,debug=True)
+
 
 
 
